@@ -259,8 +259,11 @@ footer {
     /* Скрыть переполнение */
     text-overflow: ellipsis;
     /* Добавить многоточие для длинного текста */
-    white-space: nowrap;
-    /* Запретить перенос строк */
+    white-space: normal;
+    white-space: normal;
+    /* Разрешить перенос строк */
+    word-wrap: break-word;
+    /* Перенос длинных слов на новую строку */
 }
 
 .icon-table {
