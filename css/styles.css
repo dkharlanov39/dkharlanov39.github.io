@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+
+.carousel-item {
+    height: 500px;
+    /* Высота карусели */
+    position: relative;
+    /* Для позиционирования затемняющего слоя */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    /* Обеспечивает правильное отображение изображений */
+    height: 100%;
+    /* Заполнение высоты карусели */
+    width: 100%;
+    /* Заполнение ширины карусели */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Полупрозрачный черный фон */
+}
+
+.carousel-caption {
+    position: absolute;
+    /* Позиционирование текста поверх изображения */
+    top: 50%;
+    /* Центрирование по вертикали */
+    left: 50%;
+    /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%);
+    /* Центрирование по обоим направлениям */
+    text-align: center;
+    /* Выравнивание текста по центру */
+    bottom: auto;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    /* Прозрачный фон */
+    border: 2px solid white;
+    /* Белая граница */
+    color: white;
+    /* Белый текст */
+    padding: 10px 20px;
+    /* Отступы для кнопки */
+    text-align: center;
+    /* Центрирование текста */
+    transition: background-color 0.3s ease;
+    /* Плавный переход для фона */
+}
+
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Затемнение кнопки при наведении */
+    border-color: white;
+    /* Сохранение белой границы при наведении */
+}
+
+.right-section img {
+    width: 100%;
+    /* Ширина 100% от родительского контейнера */
+    height: auto;
+    /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover;
+    /* Сохранение пропорций при заполнении области */
+}
+
+
+
+.line-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Отступы сверху и снизу */
+}
+
+.line {
+    flex-grow: 1;
+    /* Линия занимает оставшееся пространство */
+    height: 1px;
+    /* Высота линии */
+    background-color: gray;
+    /* Цвет линии */
+}
+
+.icon-arrow-down {
+    margin: 0 10px;
+    /* Отступы вокруг иконки */
+    color: black;
+    /* Цвет иконки */
+}
+
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    /* Ширина круга */
+    height: 50px;
+    /* Высота круга */
+    border-radius: 50%;
+    /* Закругление для круга */
+    background-color: white;
+    /* Цвет фона круга */
+    color: black;
+    /* Цвет текста */
+    font-size: 24px;
+    /* Размер шрифта */
+    cursor: pointer;
+    /* Указатель при наведении */
+    margin: 0 10px;
+    /* Отступы между иконками */
+    border: 2px solid black;
+    /* Черная граница по умолчанию */
+    transition: background-color 0.3s;
+    /* Плавный переход для фона */
+}
+
+.icon:hover {
+    background-color: lightgray;
+    /* Цвет фона при наведении */
+}
+
+.collapse {
+    width: 100%;
+    /* Ширина сворачиваемого содержимого на всю ширину родителя */
+}
+
+.divider {
+    flex-grow: 1;
+    /* Заставляем линию занимать оставшееся пространство */
+    height: 2px;
+    /* Высота линии */
+    background-color: transparent;
+    /* Цвет фона линии по умолчанию (прозрачный) */
+    border-top: 1px solid black;
+    /* Прерывистая линия сверху */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    /* Выравнивание по центру по вертикали */
+}
+
+.content {
+    padding: 15px;
+    /* Отступы внутри содержимого */
+}
+
+.icon-parents {
+    margin-right: 10px;
+    /* Отступ между иконкой и заголовком */
+    color: orange;
+    /* Цвет иконки */
+}
+
+.d-flex-align {
+    display: flex;
+    align-items: center;
+    /* Вертикальное выравнивание */
+}
+
+.social-icon {
+    position: relative;
+    /* Для позиционирования круга вокруг иконки */
+    display: inline-block;
+    /* Чтобы круг оборачивал только иконку */
+}
+
+.social-icon a {
+    color: white;
+    /* Цвет иконок */
+    font-size: 48px;
+    /* Увеличенный размер иконок */
+}
+
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Центрирование по вертикали */
+    left: 50%;
+    /* Центрирование по горизонтали */
+    width: 64px;
+    /* Ширина круга (должна быть равна высоте) */
+    height: 64px;
+    /* Высота круга (должна быть равна ширине) */
+    border-radius: 50%;
+    /* Круглая форма */
+    background-color: rgba(211, 211, 211, 0.5);
+    /* Полупрозрачный светло-серый цвет (lightgray) */
+    opacity: 0;
+    /* Скрыть круг по умолчанию */
+    transition: opacity 0.3s ease;
+    /* Плавный переход для появления круга */
+    transform: translate(-50%, -50%);
+    /* Сдвиг на половину ширины и высоты для центрирования */
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+    /* Показать круг при наведении */
+}
+
+
+.btn-primary{
+    background-color: orange;
+    border: 0;
+}
+
+.btn-primary::after{
+    background-color: orange;
+    border: 0;
+}
