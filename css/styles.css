@@ -7,6 +7,42 @@ h2 {
 }
 
 
+html,
+body {
+    height: 100%;
+    /* Задаем высоту 100% для html и body */
+    margin: 0;
+    /* Убираем отступы */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Устанавливаем вертикальное направление */
+}
+
+.content-footer {
+    flex: 1;
+    /* Позволяет контенту занимать оставшееся пространство */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    height: 60px;
+    /* Высота футера */
+    background-color: white;
+    /* Цвет фона футера */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    background-color: white;
+}
+
 .carousel-item {
     height: 500px;
     /* Высота карусели */
@@ -176,55 +212,69 @@ h2 {
 }
 
 .social-icon {
-    position: relative;
-    /* Для позиционирования круга вокруг иконки */
-    display: inline-block;
-    /* Чтобы круг оборачивал только иконку */
+    font-size: 2rem;
+    /* Размер иконок */
+    margin-bottom: 10px;
+    /* Отступ снизу */
 }
 
 .social-icon a {
     color: white;
     /* Цвет иконок */
+    transition: color 0.3s;
+    /* Плавный переход цвета */
     font-size: 48px;
-    /* Увеличенный размер иконок */
+}
+
+.social-icon a:hover {
+    color: orange;
+    /* Цвет при наведении */
 }
 
 
-.social-icon::before {
-    content: '';
+.btn-primary {
+    background-color: orange;
+    border: 0;
+}
+
+.btn-primary::after {
+    background-color: orange;
+    border: 0;
+}
+
+.table {
+    border: 1px solid lightgray;
+    table-layout: fixed;
+    /* Фиксированная ширина таблицы */
+    width: 100%;
+    /* Ширина таблицы 100% */
+}
+
+.table th,
+.table td {
+    cursor: pointer;
+    position: relative;
+    /* Для абсолютного позиционирования иконки */
+    overflow: hidden;
+    /* Скрыть переполнение */
+    text-overflow: ellipsis;
+    /* Добавить многоточие для длинного текста */
+    white-space: nowrap;
+    /* Запретить перенос строк */
+}
+
+.icon-table {
     position: absolute;
+    /* Абсолютное позиционирование иконки */
+    right: 10px;
+    /* Отступ от правого края */
     top: 50%;
     /* Центрирование по вертикали */
-    left: 50%;
-    /* Центрирование по горизонтали */
-    width: 64px;
-    /* Ширина круга (должна быть равна высоте) */
-    height: 64px;
-    /* Высота круга (должна быть равна ширине) */
-    border-radius: 50%;
-    /* Круглая форма */
-    background-color: rgba(211, 211, 211, 0.5);
-    /* Полупрозрачный светло-серый цвет (lightgray) */
-    opacity: 0;
-    /* Скрыть круг по умолчанию */
-    transition: opacity 0.3s ease;
-    /* Плавный переход для появления круга */
-    transform: translate(-50%, -50%);
-    /* Сдвиг на половину ширины и высоты для центрирования */
+    transform: translateY(-50%);
+    /* Центрирование по вертикали */
 }
 
-.social-icon:hover::before {
-    opacity: 1;
-    /* Показать круг при наведении */
-}
-
-
-.btn-primary{
-    background-color: orange;
-    border: 0;
-}
-
-.btn-primary::after{
-    background-color: orange;
-    border: 0;
+.full-width-row {
+    width: 100%;
+    /* Убедимся, что ширина 100% */
 }
