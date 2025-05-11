@@ -31,42 +31,30 @@
 
     <div class="container mt-5">
         <table class="table table-bordered">
-  
+
             <tbody>
                 <!-- Строки таблицы -->
                 <tr data-bs-toggle="collapse" data-bs-target="#content1" aria-expanded="false" aria-controls="content1"
                     onclick="toggleIcon(this)">
-                    <td>Строка 1
+                    <td><b>1. Основные сведения</b>
                         <i class="icon-table fas fa-chevron-up"></i>
                     </td>
                 </tr>
                 <tr id="content1" class="collapse">
                     <td class="full-width-row"> <!-- Используем класс full-width-row -->
                         <div class="row m-3">
-                            <div class="col-3">Контент колонки 1</div>
-                            <div class="col-9">Контент колонки 2</div>
-                            <hr>
+                            <hr class="mt-3">
+                            <div class="col-md-4 align-self-center"><b>Наменование</b></div>
+                            <div class="col-md-8 align-self-center">
+                                Общество с ограниченной ответственностью "МАЛЕНЬКАЯ СТРАНА"</div>
+                            <hr class="mt-3">
+                            <div class="col-md-4 align-self-center"><b>Дата создания</b></div>
+                            <div class="col-md-8 align-self-center">
+                                27 октября 2004 года</div>
+                            <hr class="mt-3">
                         </div>
                     </td>
                 </tr>
-
-                <tr data-bs-toggle="collapse" data-bs-target="#content2" aria-expanded="false" aria-controls="content2"
-                    onclick="toggleIcon(this)">
-                    <td>Строка 2
-                        <i class="icon-table fas fa-chevron-up"></i>
-                    </td>
-                </tr>
-                <tr id="content2" class="collapse">
-                    <td class="full-width-row"> <!-- Используем класс full-width-row -->
-                        <div class="row">
-                            <div class="col-3">Контент колонки 1</div>
-                            <div class="col-9">Контент колонки 2</div>
-                        </div>
-                    </td>
-                </tr>
-
-                
-
             </tbody>
         </table>
     </div>
